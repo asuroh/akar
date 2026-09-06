@@ -1,0 +1,7 @@
+CREATE TABLE tb_absensi (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    jam_masuk DATETIME NOT NULL,
+    jam_pulang DATETIME NULL,
+    FOREIGN KEY (user_id) REFERENCES tb_users(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
